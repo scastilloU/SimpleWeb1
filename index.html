@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Operators</h1>
+<h2>The Assignment (=) Operator</h2>
+
+
+<label for="number">dato 1</label>
+<input type="number" class="d1" name="dato1" size="30" required><br>
+<label for="number">dato 2</label> <!-- Corrected label for dato2 -->
+<input type="number" class="d2" name="dato2" size="30" required>
+
+<br><br>
+
+<button onclick="Operaciones()">Result</button>
+<br><br>
+<p id="demo"></p>
+
+<script >
+
+    function Operaciones() {
+        // Get input values using class names
+        var dato1 = parseFloat(document.querySelector(".d1").value); // Use parseFloat to convert input values to numbers
+        var dato2 = parseFloat(document.querySelector(".d2").value);
+    
+        // Check if both inputs are valid numbers
+        if (isNaN(dato1) || isNaN(dato2)) {
+            document.getElementById("demo").innerHTML = "Ingrese numeros validos.";
+        } else {
+            // Perform the multiplication
+            var result = dato1 * dato2;
+            console.log(result);
+    
+            document.getElementById("demo").innerHTML = "Resultado: " + result;
+        }
+    }
+</script>
+
+</body>
+</html>
